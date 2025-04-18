@@ -1,0 +1,24 @@
+## Deploys the Ingress Controller for NGINX Plus
+nginxplus: true
+## Truncated fields
+## ...
+## ...
+image:
+## The image repository for the desired NGINX Ingress Controller image
+repository: private-registry.nginx.com/nginx-ic-nap-dos/nginx-plus-ingress:5.0.0
+
+## The version tag
+tag: 5.0.0
+
+serviceAccount:
+    ## The annotations of the service account of the Ingress Controller pods.
+    annotations: {}
+
+## Truncated fields
+## ...
+## ...
+
+    ## The name of the secret containing docker registry credentials.
+    ## Secret must exist in the same namespace as the helm release.
+    ## Note that also imagePullSecretsNames can be used here if multiple secrets need to be set.
+    imagePullSecretName: regcred
