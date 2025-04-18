@@ -110,6 +110,9 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 # sudo chown $(id -u):$(id -g) $HOME/.kube/config
 # This variable export is here when you are installing this as the root user, comment it out if you are installing as another user
 export KUBECONFIG=/etc/kubernetes/admin.conf
+echo "=== Testing if the EXPORT worked ==="
+echo $KUBECONFIG
+echo "== You should see the path to the admin.conf file =="
 
 echo "=== Installing Flannel CNI network plugin ==="
 # Apply Flannel CNI network plugin for pod-to-pod communication
