@@ -110,6 +110,8 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 # sudo chown $(id -u):$(id -g) $HOME/.kube/config
 # This variable export is here when you are installing this as the root user, comment it out if you are installing as another user
 export KUBECONFIG=/etc/kubernetes/admin.conf
+# this command will make this persist
+echo 'export KUBECONFIG=/etc/kubernetes/admin.conf' >> ~/.bashrc
 echo "=== Testing if the EXPORT worked ==="
 echo $KUBECONFIG
 echo "== You should see the path to the admin.conf file =="
