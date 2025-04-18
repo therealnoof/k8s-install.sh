@@ -107,6 +107,7 @@ echo "Setting up kubeconfig for current user"
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+# This variable export is here when you are installing this as the root user, comment it out if you are installing as another user
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
 echo "=== Installing Flannel CNI network plugin ==="
