@@ -6,7 +6,7 @@
 
 # Set Kubernetes version as variable
 # You can specify versions like "1.28.0", "1.29.1", etc.
-K8S_VERSION="${1:-1.30.0}"
+K8S_VERSION="${1:-1.32.0}"
 echo "Installing Kubernetes version: $K8S_VERSION"
 
 # Exit on any error
