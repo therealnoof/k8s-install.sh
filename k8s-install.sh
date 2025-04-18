@@ -121,6 +121,9 @@ echo "=== Installing Flannel CNI network plugin ==="
 echo "Applying Flannel network plugin"
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 
+echo "=== Installing Helm ==="
+snap install helm --classic
+
 echo "=== Configuring single-node setup ==="
 # Remove the taint on the control plane node to allow scheduling of pods
 # This is necessary for single-node setups
