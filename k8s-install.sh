@@ -122,6 +122,7 @@ echo "Applying Flannel network plugin"
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 
 echo "=== Installing Helm ==="
+# Needed to use Helm charts for Nginx installation
 snap install helm --classic
 
 echo "=== Configuring single-node setup ==="
